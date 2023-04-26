@@ -1,0 +1,23 @@
+﻿@model LoginViewModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="login-form">
+  <form asp-action="Login" method="post">
+    <h1>Login</h1>
+    <div class="content">
+      <div asp-validation-summary="ModelOnly"></div>
+      <div class="input-field">
+        <input asp-for="Login" placeholder="Email" autocomplete="nope">
+      </div>
+      <div class="input-field">
+        <input type="password" asp-for="Password" placeholder="Password" autocomplete="new-password">
+      </div>
+    </div>
+    <div class="action">
+      <button type="submit">Sign in</button>
+    </div>
+  </form>
+</div>
